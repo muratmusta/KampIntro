@@ -42,15 +42,6 @@ namespace KampIntro
 
 
 
-
-
-
-
-
-
-
-
-
             if (sistemeGirisYapmisMi == true)
             {
                 Console.WriteLine("Kullanıcı ayarları butonu");
