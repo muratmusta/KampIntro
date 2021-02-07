@@ -8,10 +8,9 @@ namespace MyDictionary
         static void Main(string[] args)
         {
             Dictionary<int, string> Ogrenci = new Dictionary<int, string>();
-            Ogrenci.Add(134, "Tolga Demirer");
-            Ogrenci.Add(158, "Ümit Özkan");
-            Ogrenci.Add(115, "Kadir Aydemir");
-            Ogrenci.Add(174, "Cemal Çiftçi");
+            Ogrenci.Add(134, "Engin Demiroğ");
+            Ogrenci.Add(158, "Kerem Varış");
+            Ogrenci.Add(115, "Murt Kurtboğan");
             Console.Write("Öğrenci No Giriniz:");
             int No = int.Parse(Console.ReadLine());
             try
@@ -24,16 +23,6 @@ namespace MyDictionary
             }
 
 
-            //Dictionary<int, string> Ogrenci = new Dictionary<int, string>();
-            //Ogrenci.Add(134, "Tolga Demirer");
-            //Ogrenci.Add(158, "Ümit Özkan");
-            //Ogrenci.Add(115, "Kadir Aydemir");
-            //Ogrenci.Add(174, "Cemal Çiftçi");
-
-            //Dictionary<int, string>.KeyCollection AnahtarListesi = Ogrenci.Keys;
-
-            //foreach (int Anahtar in AnahtarListesi)
-            //    Console.WriteLine(Anahtar);
         }
     }
 }
