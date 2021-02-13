@@ -7,8 +7,8 @@ namespace OOP3
     {
         static void Main(string[] args)
         {
-            //IhtiyacKrediManager ihtiyacManager = new IhtiyacKrediManager();
-            //ihtiyacManager.Hesapla();
+            //IhtiyacKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
+            //ihtiyacKrediManager.Hesapla();
 
             //TasitKrediManager tasitKrediManager = new TasitKrediManager();
             //tasitKrediManager.Hesapla();
@@ -20,18 +20,26 @@ namespace OOP3
 
             //******* !!! DEMEK Kİ INTERFACE LER DE O INTERFACE' İ IMPLEMENTE EDEN CLASS' IN REFERANS NUMARASINI TUTABİLİYOR !!! *******
 
-
-            IKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();         
+            IKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
             IKrediManager tasitKrediManager = new TasitKrediManager();
             IKrediManager konutKrediManager = new KonutKrediManager();
 
+            ILoggerService databaseLoggerService = new DatabaseLoggerService();
+            ILoggerService fileLoggerService = new FileLoggerService();
+
+            List<ILoggerService> loggers = new List<ILoggerService> { new SmsLoggerServices(), new FileLoggerService() };
+
             BasvuruManager basvuruManager = new BasvuruManager();
-            //basvuruManager.BasvuruYap(konutKrediManager);
+            basvuruManager.BasvuruYap(new EsnafKredisiManager(), loggers);
 
-            List<IKrediManager> krediler = new List<IKrediManager>() {ihtiyacKrediManager, tasitKrediManager };
-            basvuruManager.KrediOnBilgilendirmesiYap(krediler);
 
-        
+            List<IKrediManager> krediler = new List<IKrediManager>() { ihtiyacKrediManager, tasitKrediManager };
+
+            //basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+
+
         }
     }
+
+
 }

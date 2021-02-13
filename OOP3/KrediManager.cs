@@ -13,7 +13,7 @@ namespace OOP3
     {
         void Hesapla(); //imza // Benim için interface
         void BiseyYap();
-       
+
     }
 }
 

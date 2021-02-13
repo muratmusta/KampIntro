@@ -17,5 +17,6 @@ namespace OOP3
             Console.WriteLine("Taşıt kredisi ödeme planı hesaplandı");
 
         }
+
     }
 }

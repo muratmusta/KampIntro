@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP3
 {
-    class IhtiyacKrediManager : IKrediManager
+    class EsnafKredisiManager : IKrediManager
     {
         public void BiseyYap()
         {
@@ -13,8 +13,9 @@ namespace OOP3
 
         public void Hesapla()
         {
-            Console.WriteLine("İhtiyaç kredisi ödeme planı hesaplandı");
+            Console.WriteLine("Esnaf Kredisi hesaplandı");
         }
 
+       
     }
 }

@@ -16,5 +16,7 @@ namespace OOP3
             Console.WriteLine("Konut kredisi ödeme planı hesaplandı");
 
         }
+
+      
     }
 }
